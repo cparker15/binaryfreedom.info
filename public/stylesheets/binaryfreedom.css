@@ -1,0 +1,164 @@
+.out_shadow {
+  -moz-box-shadow: 5px 5px 5px #ccc;
+  -webkit-box-shadow: 5px 5px 5px #ccc;
+  box-shadow: 5px 5px 5px #ccc; }
+
+.in_shadow {
+  -moz-box-shadow: inset -5px 0px 25px red;
+  -webkit-box-shadow: inset -5px 0px 25px red;
+  box-shadow: inset -5px 0px 25px red; }
+
+.formbox {
+  background-color: red;
+  color: white; }
+
+body {
+  background-color: #999999;
+  font-size: 12px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+#wrapper {
+  background: transparent url(/images/nav_bg.jpg) no-repeat bottom left;
+  width: 80%;
+  background-color: #000000;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  border: thin solid #000000; }
+
+#header {
+  background: transparent url(/images/binaryfreedom_logo.png) no-repeat bottom left;
+  background-color: #FFFFFF;
+  padding: 85px;
+  margin: 0px;
+  border: thin solid #000000; }
+
+.login {
+  text-align: right; }
+
+#nav {
+  background-color: #000000;
+  width: 25%;
+  padding: 10px;
+  margin-top: 1px;
+  float: left;
+  border: #000000;
+  color: white; }
+
+#main {
+  /* background: transparent url(/images/main_bg.png); */
+  background: transparent url(/images/red-and-black.png);
+  background-color: red;
+  color: white;
+  margin-left: 30%;
+  margin-top: 1px;
+  padding: 10px;
+  border: #000000; }
+
+#footer {
+  background-color: #FFFFFF;
+  padding: 15px;
+  margin: 0px;
+  text-align: center;
+  border-top: thin solid #000000; }
+
+.cssbox, .cssbox_body, .cssbox_head, .cssbox_head h2 {
+  /* background: transparent url(/images/cuadro_img.png) no-repeat bottom right */
+  background-color: black; }
+
+.cssbox {
+  /* width:535px !important; */
+  /* IE Win = width - padding */
+  /* width: 520px; */
+  /* padding-right:20px; */
+  /* use to position the box */
+  margin: 20px auto;
+  /* border-width:15px */
+  border: thin solid #ffffff; }
+
+.cssbox_head {
+  background-position: top right;
+  text-align: center;
+  /*  margin-right:-15px; */
+  padding-right: 40px;
+  border: thin solid red; }
+
+.cssbox_head h2 {
+  background-position: top left;
+  margin: 0;
+  /* reset main site styles*/
+  border: 0;
+  /* ditto */
+  padding: 25px 0 15px 40px;
+  height: auto !important;
+  height: 1%; }
+
+/* IE Holly Hack */
+.cssbox_body {
+  background-position: bottom left;
+  margin-right: 25px;
+  /* interior-padding right */
+  padding: 15px 0 15px 40px;
+  /* mirror .cssbox_head right/left */ }
+
+/* site navigation */
+/* 
+a:link {
+text-decoration: none;
+color: #FFFFFF;
+}
+
+a:visited {
+text-decoration: none;
+color: #FFFFFF;
+}
+
+a:hover {
+text-decoration: underline;
+color: #FF0000;
+}
+
+a:active {
+text-decoration: none;
+}
+
+*/
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+#nav a {
+  text-align: center;
+  font-size: 25px;
+  display: block;
+  width: 200xp;
+  height: 40px;
+  line-height: 40xp;
+  color: #000000;
+  text-decoration: none; }
+
+#nav ul a {
+  display: block;
+  width: 200xp;
+  height: 40xp;
+  line-height: 40xp;
+  color: #ffffff;
+  text-decoration: none;
+  background: red;
+  text-ident: 50px;
+  border: thin solid #000000; }
+
+#nav li.first a {
+  height: 40xp;
+  line-height: 40xp; }
+
+#nav a:hover, .selected a {
+  background-position: right bottom;
+  background-color: black;
+  color: #ffffff; }
+
+#nav li {
+  display: inline; }

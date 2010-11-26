@@ -1,0 +1,11 @@
+%h2= @post.title
+
+.post_meta
+  %span.post_author
+    written by
+    = @post.author.name
+  %span.post_date
+    on
+    = @post.created_at.strftime("%b %d, %Y")
+.post_body
+  = @post.body

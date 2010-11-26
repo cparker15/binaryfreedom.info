@@ -23,9 +23,20 @@ gem 'mysql2'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
+gem 'haml'
+gem 'compass'
+gem 'devise'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+ group :development, :test do
+   gem 'capybara'
+   gem 'database_cleaner'
+   gem 'cucumber-rails'
+   gem 'cucumber'
+   gem "rspec-rails", ">= 2.0.0.beta.17" # gem 'rspec' not needed
+   gem 'spork'
+   gem 'launchy' # So you can do Then show me the page
+ end
+

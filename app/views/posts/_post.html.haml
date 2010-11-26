@@ -1,0 +1,13 @@
+.out_shadow
+ .cssbox
+  .cssbox_head
+   %b= post.title
+  .cssbox_body
+   %p.post_body= post.body
+   %span.author
+    by
+    = post.author.name
+    %span.published_on
+    on
+    = post.created_at.strftime("%b %d, %Y")
+

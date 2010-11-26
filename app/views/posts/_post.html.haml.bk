@@ -1,0 +1,9 @@
+%h2= post.title
+%p.post_body= post.body
+%div
+%span.author
+by
+= post.author.name
+%span.published_on
+on
+= post.published_on.strftime("%b %d, %Y")
