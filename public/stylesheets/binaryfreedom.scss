@@ -5,9 +5,9 @@
 }
 
 .in_shadow {
-   -moz-box-shadow:inset -5px 0px 25px red;
-   -webkit-box-shadow:inset -5px 0px 25px red;
-    box-shadow:inset -5px 0px 25px red;
+   -moz-box-shadow:inset -5px 0px 25px red3;
+   -webkit-box-shadow:inset -5px 0px 25px red3;
+    box-shadow:inset -5px 0px 25px red3;
 }
 
 .formbox {
@@ -25,7 +25,7 @@ font-family:Verdana, Arial, Helvetica, sans-serif;
 background: transparent url(/images/nav_bg.jpg) no-repeat bottom left;
 width: 80%;
 background-color:#000000;
-margin-top: 50px;
+margin-top: 20px;
 margin-bottom: 50px;
 margin-left: auto;
 margin-right: auto;
@@ -34,16 +34,24 @@ border: thin solid #000000;
 }
 
 #header {
-background: transparent url(/images/binaryfreedom_logo.png) no-repeat bottom left;
+background: transparent url(/images/top-bg.png) repeat-x top;
 background-color:#FFFFFF;
-padding: 85px;
+/* padding: 55px;*/  /* 85px */
+padding-right: 55px;
+padding-top: 10px;
 margin: 0px;
 border: thin solid #000000;
 }
 
-.login {
+#header-logo {
+background: transparent url(/images/binaryfreedom_logo.png) no-repeat bottom left;
+margin: 0px;
+padding-bottom: 150px;
+padding-left: 100px;
 text-align: right;
+color: #8B0000;
 }
+
 
 #nav {
 background-color: #000000;
@@ -56,7 +64,6 @@ color: white;
 }
 
 #main {
-/* background: transparent url(/images/main_bg.png); */
 background: transparent url(/images/red-and-black.png);
 background-color: red;
 color: white;
@@ -92,6 +99,7 @@ background-color: black;
    
   .cssbox_head{
    background-position:top right;
+   background-color: #8B0000;
    text-align: center;
   /*  margin-right:-15px; */ 
    padding-right:40px;
@@ -109,14 +117,15 @@ background-color: black;
    } /* IE Holly Hack */
 
   .cssbox_body{
-   background-position:bottom left;
+   background: transparent url(/images/digitalbg2.png) no-repeat bottom right;	
+   /* background-position:bottom left; */
    margin-right:25px; /* interior-padding right */ 
    padding:15px 0 15px 40px; /* mirror .cssbox_head right/left */
    }
 
 /* site navigation */
 
-/* 
+ 
 a:link {
 text-decoration: none;
 color: #FFFFFF;
@@ -129,14 +138,15 @@ color: #FFFFFF;
 
 a:hover {
 text-decoration: underline;
-color: #FF0000;
+color: #000000;
+font-size: large;
 }
 
 a:active {
 text-decoration: none;
 }
 
-*/
+
 
 #nav ul {
  margin: 0;
@@ -162,7 +172,7 @@ text-decoration: none;
  line-height: 40xp;
  color: #ffffff;
  text-decoration: none;
- background: red;
+ background: #EE0000;
  text-ident: 50px;
  border: thin solid #000000;
 }
@@ -175,7 +185,7 @@ text-decoration: none;
 
 #nav a:hover, .selected a {
  background-position: right bottom;
- background-color: black;
+ background-color: #8B0000;
  color: #ffffff;
 }
 
