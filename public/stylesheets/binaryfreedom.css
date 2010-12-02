@@ -19,6 +19,7 @@ body {
 
 #wrapper {
   background: transparent url(/images/nav_bg.jpg) no-repeat bottom left;
+  background-position-y: 50%;
   width: 80%;
   background-color: #000000;
   margin-top: 20px;
@@ -107,10 +108,14 @@ body {
 .cssbox_body {
   background: transparent url(/images/digitalbg2.png) no-repeat bottom right;
   /* background-position:bottom left; */
-  margin-right: 25px;
+  margin-right: 5px;
   /* interior-padding right */
-  padding: 15px 0 15px 40px;
+  padding: 7px 160px 40px 20px;
   /* mirror .cssbox_head right/left */ }
+
+.alingleft {
+  float: left;
+  margin-right: 1em; }
 
 /* site navigation */
 a:link {
@@ -151,7 +156,7 @@ a:active {
   line-height: 40xp;
   color: #ffffff;
   text-decoration: none;
-  background: #EE0000;
+  background: #ee0000 url(/images/top-bg.png) no-repeat top;
   text-ident: 50px;
   border: thin solid #000000; }
 

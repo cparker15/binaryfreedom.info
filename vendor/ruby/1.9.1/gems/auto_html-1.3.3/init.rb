@@ -1,0 +1,2 @@
+require 'auto_html'
+

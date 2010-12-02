@@ -3,6 +3,8 @@
   .cssbox_head
    %b= post.title
   .cssbox_body
+   .alingleft
+    = image_tag post.author.gravatar_url
    %p.post_body= post.body
    %span.author
     by
