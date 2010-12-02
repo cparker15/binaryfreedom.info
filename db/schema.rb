@@ -10,19 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101126213036) do
+ActiveRecord::Schema.define(:version => 20101202042832) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.integer  "author_id"
-    t.date     "published_on"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "body_html"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
+    t.string   "name",                                :default => "", :null => false
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
     t.string   "password_salt",                       :default => "", :null => false
