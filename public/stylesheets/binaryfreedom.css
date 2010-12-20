@@ -92,7 +92,8 @@ body {
   text-align: center;
   /*  margin-right:-15px; */
   padding-right: 40px;
-  border: thin solid red; }
+  border: thin solid red;
+  text-decoration: none; }
 
 .cssbox_head h2 {
   background-position: top left;
@@ -120,11 +121,11 @@ body {
 /* site navigation */
 a:link {
   text-decoration: none;
-  color: #FF0000; }
+  color: #FFFFFF; }
 
 a:visited {
   text-decoration: none;
-  color: #FF0000; }
+  color: #FFFFFF; }
 
 a:hover {
   text-decoration: underline;
@@ -172,3 +173,9 @@ a:active {
 
 #nav li {
   display: inline; }
+
+.menu_post {
+  display: inline; }
+
+.button_to {
+  display: inline-block; }

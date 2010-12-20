@@ -1,11 +1,27 @@
-%h2= @post.title
-
-.post_meta
-  %span.post_author
-    written by
+.out_shadow
+ .cssbox
+  .cssbox_head
+   %b= @post.title
+  .cssbox_body
+   .alingleft
+    = image_tag @post.author.gravatar_url
+   %p.post_body= @post.body_html.html_safe
+   %span.author
+    by
     = @post.author.name
-  %span.post_date
+    %span.published_on
     on
     = @post.created_at.strftime("%b %d, %Y")
-.post_body
-  = @post.body
+   - if user_signed_in?
+    .menu_post
+     = csrf_meta_tag
+     = button_to "Delete", { :action => :destroy, :id => @post.id }, :confirm => "Are you sure?", :method => :delete
+     = button_to "Edit", { :action => :edit, :id => @post.id },  :method => :get
+   / AddThis Button BEGIN
+   .addthis_toolbox.addthis_32x32_style
+    /%a.addthis_button_tweet
+    /%a.addthis_button_facebook_like
+    %a.addthis_button_preferred_1
+    %a.addthis_button_preferred_2
+    %a.addthis_button_preferred_3
+   / AddThis Button END

@@ -1,14 +1,26 @@
 DevBinaryfreedomInfo::Application.routes.draw do
-  get "user/index"
+  resources :posts
 
+  get "user/index"
   get "user/show"
+  get "post/index"
 
   devise_for :users
+    #match 'posts' => 'posts#index'
+   # match 'post/:id' => 'posts#show'
+    #match 'posts/edit/:id' => 'posts#edit'
+    #delete 'posts/:id' => 'posts#destroy'
 
-  get "posts/index"
-  get "post/:id" => "posts#show"
-  get "posts/create" => "posts#create"
-  post "posts/create" => "posts#create"
+
+    #get "post/:id" => "posts#show"
+   # get  "posts/create" => "posts#create"
+   # post "posts/create" => "posts#create"
+    #get  "posts/update/:id" => "posts#update"
+    #put  "posts/edit/:id" => "posts#update"
+    #post "posts/edit/:id" => "posts#edit"
+   
+#   delete "posts/delete/:id" => "posts#destroy"
+#   match "/posts/delete/:id" => "posts#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,13 +69,21 @@ DevBinaryfreedomInfo::Application.routes.draw do
   #     resources :products
   #   end
 
+
+#  resources :users do
+#  	resources :posts
+#  end
+
+
+
+
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "posts#index"
-
+    root :to => "posts#index"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  #match ':controller(/:action(/:id(.:format)))'
 end

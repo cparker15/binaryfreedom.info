@@ -1,7 +1,7 @@
 .out_shadow
  .cssbox
   .cssbox_head
-   %b= post.title
+   %b= link_to post.title, post
   .cssbox_body
    .alingleft
     = image_tag post.author.gravatar_url
@@ -12,4 +12,9 @@
     %span.published_on
     on
     = post.created_at.strftime("%b %d, %Y")
-
+    = button_to "Show", post, :method => :get
+   - if user_signed_in?
+    .menu_post
+     = csrf_meta_tag
+     = button_to "Delete", { :action => :destroy, :id => post.id }, :confirm => "Are you sure?", :method => :delete
+     = button_to "Edit", { :action => :edit, :id => post.id },  :method => :get

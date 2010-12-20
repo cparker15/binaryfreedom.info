@@ -1,28 +1,74 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create]
 
+  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+
+  # GET /posts
+  # GET /posts.xml
   def index
-    @posts = Post.all(:order => "created_at DESC")
+    @posts = Post.all(:order => 'created_at DESC', :limit => '10')
+
   end
-  
+
+  # GET /posts/1
+  # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id]) # Post.find_by_id(params[:id]) used in screencast
+    @post = Post.find(params[:id])
   end
- 
-  def create
+
+  # GET /posts/new
+  # GET /posts/new.xml
+  def new
     @post = Post.new
   end
 
+  # GET /posts/1/edit
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  # POST /posts
+  # POST /posts.xml
   def create
-    if request.post?
       @post = Post.new(params[:post])
-    if @post.save
-      redirect_to "/post/#{@post.id}"
+
+    respond_to do |format|
+      if @post.save
+        flash[:notice] = 'Post was successfully created.'
+        format.html { redirect_to(@post) }
+        format.xml  { render :xml => @post, :status => :created, :location => @post }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+      end
     end
-   
-   else
-      @post = Post.new
+end
+
+  # PUT /posts/1
+  # PUT /posts/1.xml
+  def update
+    @post = Post.find(params[:id])
+    
+    respond_to do |format|
+      if @post.update_attributes(params[:post])
+        flash[:notice] = 'Post was successfully updated.'
+        format.html { redirect_to(@post) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+      end
     end
   end
 
+  # DELETE /posts/1
+  # DELETE /posts/1.xml
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(posts_url) }
+      format.xml  { head :ok }
+    end
+  end
 end

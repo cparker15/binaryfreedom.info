@@ -105,6 +105,7 @@ background-color: black;
   /*  margin-right:-15px; */ 
    padding-right:40px;
    border: thin solid red;
+   text-decoration: none;
    }
 
   .cssbox_head h2{
@@ -135,12 +136,12 @@ background-color: black;
 
 a:link {
 text-decoration: none;
-color: #FF0000;
+color: #FFFFFF;
 }
 
 a:visited {
 text-decoration: none;
-color: #FF0000;
+color: #FFFFFF;
 }
 
 a:hover {
@@ -199,4 +200,12 @@ text-decoration: none;
 
 #nav li {
  display: inline;
+}
+
+.menu_post {
+ display: inline;
+}
+
+.button_to {
+ display: inline-block;
 }

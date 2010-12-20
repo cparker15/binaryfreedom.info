@@ -1,9 +1,19 @@
-%h2= post.title
-%p.post_body= post.body
-%div
-%span.author
-by
-= post.author.name
-%span.published_on
-on
-= post.published_on.strftime("%b %d, %Y")
+.out_shadow
+ .cssbox
+  .cssbox_head
+   %b= post.title
+  .cssbox_body
+   .alingleft
+    = image_tag post.author.gravatar_url
+   %p.post_body= post.body_html.html_safe
+   %span.author
+    by
+    = post.author.name
+    %span.published_on
+    on
+    = post.created_at.strftime("%b %d, %Y")
+   - if user_signed_in?
+    .menu_post
+     = csrf_meta_tag
+     = button_to "Delete", { :action => :destroy, :id => post.id }, :confirm => "Are you sure?", :method => :delete
+     = button_to "Edit", { :action => :edit, :id => post.id },  :method => :update
