@@ -10,19 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101202042832) do
+ActiveRecord::Schema.define(:version => 20101220065827) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.integer  "author_id"
+    t.date     "published_on"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "body_html"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name",                                :default => "", :null => false
+    t.string   "name"
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
     t.string   "password_salt",                       :default => "", :null => false
@@ -36,6 +37,9 @@ ActiveRecord::Schema.define(:version => 20101202042832) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

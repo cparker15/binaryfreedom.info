@@ -1,14 +1,15 @@
-.formbox
- .cssbox
-  .cssbox_head
-   %b create new entry:
-   .cssbox_body
-    = form_for(@post) do |form|
-     %div
-      = form.label :title
-      = form.text_field :title
-     %div
-      = form.label :body
-      = form.text_area :body
+.out_shadow
+ .formbox
+  .cssbox
+   .cssbox_head
+    %b create new entry:
+    .cssbox_body
+     = form_for(@post) do |form|
+      %div
+       = form.label :title
+       = form.text_field :title
+      %div
+       = form.label :body
+       = form.text_area :body
 	
-     %div= submit_tag "Save Post"
+      %div= submit_tag "Save Post"

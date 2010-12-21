@@ -1,0 +1,27 @@
+.out_shadow
+ .cssbox
+  .cssbox_head
+   %b Sign up
+  .cssbox_body
+   %p.post_body
+   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    %p
+     = f.label :email
+     Make sure you create a #{link_to "Gravatar account", "http://gravatar.com/site/signup/"}
+     %br/
+     = f.text_field :email
+    %p
+     = f.label :name
+     %br/
+     = f.text_field :name
+    %p
+     = f.label :password
+     %br/
+     = f.password_field :password
+    %p
+     = f.label :password_confirmation
+     %br/
+     = f.password_field :password_confirmation
+    %p= f.submit "Sign up"
+   = render :partial => "devise/shared/links"

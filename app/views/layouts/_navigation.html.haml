@@ -2,8 +2,11 @@
  %li
   .out_shadow
    = link_to "Home", posts_path
-   = link_to "Create", new_post_path
+   - if user_signed_in?
+    = link_to "Create", new_post_path
+   - else
+    = link_to "Register", new_user_registration_path
    = link_to "Diaspora", "http://diaspora.binaryfreedom.info"
-   = link_to "Jabber/XMPP", "http://diaspora.binaryfreedom.info"
-   = link_to "Email", "http://diaspora.binaryfreedom.info"
-   = link_to "More things", :action => "create"
+   = link_to "Jabber/XMPP", "http://binaryfreedom.info:9090/plugins/registration/sign-up.jsp"
+   = link_to "Mail", "http://mail.binaryfreedom.info"
+   = link_to "About us", post_about_path

@@ -12,16 +12,15 @@
     %span.published_on
     on
     = @post.created_at.strftime("%b %d, %Y")
-   - if user_signed_in?
-    .menu_post
+   .menu_post
+    - if ( user_signed_in? && current_user.id == @post.author.id )
      = csrf_meta_tag
      = button_to "Delete", { :action => :destroy, :id => @post.id }, :confirm => "Are you sure?", :method => :delete
      = button_to "Edit", { :action => :edit, :id => @post.id },  :method => :get
-   / AddThis Button BEGIN
-   .addthis_toolbox.addthis_32x32_style
-    /%a.addthis_button_tweet
-    /%a.addthis_button_facebook_like
-    %a.addthis_button_preferred_1
-    %a.addthis_button_preferred_2
-    %a.addthis_button_preferred_3
-   / AddThis Button END
+    .addthis_toolbox.addthis_default_style.addthis_32x32_style{"addthis:title" => "#{@post.title}"}
+     %a.addthis_button_facebook
+     %a.addthis_button_digg
+     %a.addthis_button_twitter
+     %a.addthis_button_email
+     %a.addthis_button_identica
+     %a.addthis_button_compact

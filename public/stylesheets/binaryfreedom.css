@@ -70,7 +70,15 @@ body {
   padding: 15px;
   margin: 0px;
   text-align: center;
-  border-top: thin solid #000000; }
+  border-top: thin solid #000000;
+  text-shadow: 1px 2px 5px red; }
+
+#title_msg {
+  margin: 0px;
+  text-align: right;
+  font-size: 22px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-shadow: 1px 2px 5px red; }
 
 .cssbox, .cssbox_body, .cssbox_head, .cssbox_head h2 {
   /* background: transparent url(/images/cuadro_img.png) no-repeat bottom right */
@@ -93,7 +101,8 @@ body {
   /*  margin-right:-15px; */
   padding-right: 40px;
   border: thin solid red;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 1px 2px 5px black; }
 
 .cssbox_head h2 {
   background-position: top left;
@@ -112,7 +121,8 @@ body {
   margin-right: 5px;
   /* interior-padding right */
   padding: 7px 160px 40px 20px;
-  /* mirror .cssbox_head right/left */ }
+  /* mirror .cssbox_head right/left */
+  background-color: black; }
 
 .alingleft {
   float: left;
@@ -121,17 +131,20 @@ body {
 /* site navigation */
 a:link {
   text-decoration: none;
+  text-shadow: 1px 2px 5px black;
   color: #FFFFFF; }
 
 a:visited {
   text-decoration: none;
+  text-shadow: 1px 2px 5px black;
   color: #FFFFFF; }
 
 a:hover {
   text-decoration: underline;
   color: #FFFFFF;
   font-size: large;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 1px 2px 5px black; }
 
 a:active {
   text-decoration: none; }
@@ -149,7 +162,8 @@ a:active {
   height: 40px;
   line-height: 40xp;
   color: #000000;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 1px 2px 5px black; }
 
 #nav ul a {
   display: block;
@@ -160,7 +174,8 @@ a:active {
   text-decoration: none;
   background: #ee0000 url(/images/top-bg.png) no-repeat top;
   text-ident: 50px;
-  border: thin solid #000000; }
+  border: thin solid #000000;
+  text-shadow: 1px 2px 5px black; }
 
 #nav li.first a {
   height: 40xp;
@@ -169,7 +184,8 @@ a:active {
 #nav a:hover, .selected a {
   background-position: right bottom;
   background-color: #8B0000;
-  color: #ffffff; }
+  color: #ffffff;
+  text-shadow: 1px 2px 5px black; }
 
 #nav li {
   display: inline; }

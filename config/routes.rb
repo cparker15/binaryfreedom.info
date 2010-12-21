@@ -10,10 +10,10 @@ DevBinaryfreedomInfo::Application.routes.draw do
    # match 'post/:id' => 'posts#show'
     #match 'posts/edit/:id' => 'posts#edit'
     #delete 'posts/:id' => 'posts#destroy'
-
-
+    match 'post/about' => 'posts#about'
+    
     #get "post/:id" => "posts#show"
-   # get  "posts/create" => "posts#create"
+    #get  "post/about" => "posts#about"
    # post "posts/create" => "posts#create"
     #get  "posts/update/:id" => "posts#update"
     #put  "posts/edit/:id" => "posts#update"

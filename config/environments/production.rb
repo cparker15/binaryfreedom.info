@@ -19,7 +19,7 @@ DevBinaryfreedomInfo::Application.configure do
   # just comment this out and Rails will serve the files
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+   config.log_level = :debug
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -47,5 +47,5 @@ DevBinaryfreedomInfo::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   #devise
-  config.action_mailer.default_url_options = { :host => 'dev.binaryfreedom.info' }
+  config.action_mailer.default_url_options = { :host => 'binaryfreedom.info' }
 end

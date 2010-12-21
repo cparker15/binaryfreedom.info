@@ -9,6 +9,9 @@ class PostsController < ApplicationController
 
   end
 
+  def about
+  end
+
   # GET /posts/1
   # GET /posts/1.xml
   def show
@@ -30,6 +33,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
       @post = Post.new(params[:post])
+      @post.author_id = current_user.id
 
     respond_to do |format|
       if @post.save
