@@ -22,7 +22,7 @@ font-family:Verdana, Arial, Helvetica, sans-serif;
 }
 
 #wrapper {
-background: transparent url(/images/nav_bg.png) no-repeat bottom left;
+background: transparent url(/images/nav_bg.png) repeat-y bottom left;
 background-position-y: 50%;
 width: 80%;
 background-color:#000000;
@@ -171,8 +171,8 @@ text-decoration: none;
 
 
 #nav ul {
- margin: 0;
- padding:0;
+ margin: 6;
+ padding:4;
  list-style-type: none;
 }
 
@@ -225,3 +225,27 @@ text-shadow : 1px 2px 5px black;
 .button_to {
  display: inline-block;
 }
+
+#twtr-widget-1 a:link, #twtr-widget-1 a:visited, #twtr-widget-1 a:hover {
+ font-size: small;
+ text-decoration: none;
+ display: inline;
+}
+
+#twtr-widget-1.twtr-widget {
+ margin-left: 37px;
+}
+
+.atclear {
+   float: none;
+}
+
+#atclear {
+   float: none;
+}
+
+div.atclear {
+   float: none;
+}
+
+.addthis_toolbox { height:20px !important; }

@@ -1,6 +1,7 @@
 !!!
 %html{:lang => I18n.locale.to_s}
  %head
+  %link{:href => "anarchism_favicon.png", :rel => "icon", :type => "image/png"}/
   %meta{:charset => 'utf-8'}
   %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}
   = stylesheet_link_tag :all, :recursive => true
@@ -20,6 +21,8 @@
    = render 'layouts/header_msg'
   #nav
    = render 'layouts/navigation'
+   .out_shadow
+    = render 'layouts/tweets2'
   #main
    = yield
   #footer

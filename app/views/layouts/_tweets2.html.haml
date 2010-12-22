@@ -1,0 +1,33 @@
+%script{:src => "http://widgets.twimg.com/j/2/widget.js"}
+:javascript
+  new TWTR.Widget({
+    version: 2,
+    type: 'search',
+    search: 'binaryfreedom OR \"binary freedom\" OR hacker OR hacking OR cyberwar OR annonymous OR wikileaks',
+    interval: 8000,
+    title: 'Cyber(A)narchism',
+    subject: 'B1n(a)ryFreed0m Live feed',
+    width: 'auto',
+    height: 350,
+    theme: {
+      shell: {
+        background: '#E20000',
+        color: '#ffffff'
+      },
+      tweets: {
+        background: '#000000',
+        color: '#f5f5f5',
+        links: '#f50303'
+      }
+    },
+    features: {
+      scrollbar: false,
+      loop: true,
+      live: true,
+      hashtags: true,
+      timestamp: true,
+      avatars: true,
+      toptweets: true,
+      behavior: 'default'
+    }
+  }).render().start();

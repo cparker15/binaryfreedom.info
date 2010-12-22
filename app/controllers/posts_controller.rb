@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all(:order => 'created_at DESC', :limit => '10')
+    @posts = Post.all(:order => 'created_at DESC', :limit => '10').paginate :page => params[:page], :per_page => 10
 
   end
 
