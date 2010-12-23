@@ -6,21 +6,8 @@ DevBinaryfreedomInfo::Application.routes.draw do
   get "post/index"
 
   devise_for :users
-    #match 'posts' => 'posts#index'
-   # match 'post/:id' => 'posts#show'
-    #match 'posts/edit/:id' => 'posts#edit'
-    #delete 'posts/:id' => 'posts#destroy'
-    match 'post/about' => 'posts#about'
-    
-    #get "post/:id" => "posts#show"
-    #get  "post/about" => "posts#about"
-   # post "posts/create" => "posts#create"
-    #get  "posts/update/:id" => "posts#update"
-    #put  "posts/edit/:id" => "posts#update"
-    #post "posts/edit/:id" => "posts#edit"
-   
-#   delete "posts/delete/:id" => "posts#destroy"
-#   match "/posts/delete/:id" => "posts#destroy"
+  match 'post/about' => 'posts#about'
+  match 'sitemap', :to => 'sitemap#index', :via => [:get]    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -35,6 +22,7 @@ DevBinaryfreedomInfo::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
 
   # Sample resource route with options:
   #   resources :products do
