@@ -256,3 +256,11 @@ div.atclear {
 }
 
 .addthis_toolbox { height:20px !important; }
+
+.fb_iframe_widget {
+ -moz-box-shadow: 5px 5px 5px #ccc;
+ -webkit-box-shadow: 5px 5px 5px #ccc;
+ box-shadow: 5px 5px 5px #ccc;
+ text-shadow : 1px 2px 5px black;
+ margin: 40px;
+}
