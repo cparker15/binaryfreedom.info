@@ -7,7 +7,9 @@ DevBinaryfreedomInfo::Application.routes.draw do
 
   devise_for :users
   match 'post/about' => 'posts#about'
+  match 'post/xmpp' => 'posts#xmpp'
   match 'sitemap', :to => 'sitemap#index', :via => [:get]    
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

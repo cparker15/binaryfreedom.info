@@ -1,0 +1,26 @@
+.out_shadow
+ .cssbox
+  .cssbox_head
+   %b How to use and register @ THE BINARYFREEDOM XMPP/JABBER Server
+  .cssbox_body
+     %p.post_body
+      To a{:href => "http://binaryfreedom.info:9090/plugins/registration/sign-up.jsp"} REGISTER an account
+      if you are new to Instant messaging you may want to download a{:href => "http://pidgin.im/"} Pidgin
+      %b Step 1
+      Open Pidgin: Double click on the pidgin icon on your desktop or open Start/Programs/Startup and double click on Pidgin.
+      Open Accounts/Manage Accounts/add
+      %b Step 2
+      Then set up an account with the following settings:
+      Protocol: XMPP
+      Username: your BINARYFREEDOM xmpp username (JID, jabber ID)
+      Domain: binaryfreedom.info
+      Password: your BINARYFREEDOM password
+      Local Alias: Optional
+      You may want to tick remember password
+      %b Step 3
+      Select SSL
+    %p
+    Follow us on 
+    = link_to 'Identi.ca', 'http://identi.ca/binaryfreedom' 
+    or    
+    = link_to 'Twitter', 'http://twitter.com/B1naryFreed0m'

@@ -16,6 +16,9 @@ class PostsController < ApplicationController
   def about
   end
 
+  def xmpp
+  end
+
   # GET /posts/1
   # GET /posts/1.xml
   def show
