@@ -1,4 +1,7 @@
 .content
-  = render :partial => "post", :collection => @posts
+ %center
+  = will_paginate @posts
+ = render :partial => "post", :collection => @posts
+ %center
   = will_paginate @posts
   = page_entries_info @posts

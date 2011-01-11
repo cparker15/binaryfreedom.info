@@ -29,7 +29,7 @@ gem 'devise'
 gem 'gravtastic'
 gem "auto_html"
 gem 'panmind-recaptcha', :git => 'git://github.com/Panmind/recaptcha.git'
-gem 'will_paginate', "~> 3.0.pre2"
+gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
